@@ -37,5 +37,25 @@ namespace Business.Concrete
             return new SuccessResult(Messages.RentedCar);
             
         }
+
+        public IResult Delete(Rental rental)
+        {
+            throw new NotImplementedException();
         }
+
+        public IDataResult<List<Rental>> GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
+        public IDataResult<Rental> GetById(int rentalId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IResult Update(Rental rental)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }
