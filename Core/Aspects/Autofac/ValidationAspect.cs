@@ -14,9 +14,10 @@ namespace Core.Aspects.Autofac.Validation
         private Type _validatorType;
         public ValidationAspect(Type validatorType)
         {
+            //defensive 
             if (!typeof(IValidator).IsAssignableFrom(validatorType))
             {
-                throw new System.Exception("bu bir doğruluma sınıfı değildir!");
+                throw new Exception("bu bir doğruluma sınıfı değildir!");
             }
 
             _validatorType = validatorType;
@@ -24,6 +25,7 @@ namespace Core.Aspects.Autofac.Validation
         protected override void OnBefore(IInvocation invocation)
         {
             //reflection => çalışma anında bir şeyleri çalıştırıyor. newleme işlemini çalışma anında yapıyor
+            //çalışma anında direk instance üretiyoruz
             var validator = (IValidator)Activator.CreateInstance(_validatorType); 
 
             //validatorün generic typelarında ilkini bul => CAR

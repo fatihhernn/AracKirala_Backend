@@ -27,6 +27,8 @@ namespace Business.Constants
         public static string ColorListed = "Renk başarılı bir şekilde listelendi";
 
         public static string AddedCustomer = "Müşteri başarılı bir şekilde eklendi";
+       
+
         public static string DeletedCustomer = "Müşteri başarılı bir şekilde silindi";
         public static string CustomersListed = "Müşteriler başarılı bir şekilde listelendi";
         public static string CustomerListed = "Müşteri başarılı bir şekilde listelendi";
@@ -40,5 +42,12 @@ namespace Business.Constants
         public static string AddedUser = "Kullanıcı eklendi";
 
         public static string RentalTimeError = "Kiralayacağınız araba kiralanmış";
+
+        public static string AddedCarImage = "Fotoğraf eklendi";
+        public static string DeletedCarImage = "Fotoğraf silindi";
+       
+        public static string UploadCarImage = "Fotoğraf yüklendi";
+
+        public static string CarImageLimitExceeded = "Eklenebilecek resim sayısı aşılmaktadır";
     }
 }
