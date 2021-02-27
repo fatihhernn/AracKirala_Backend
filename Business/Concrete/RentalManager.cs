@@ -1,5 +1,7 @@
 ﻿using Business.Abstract;
 using Business.Constants;
+using Business.ValidationRules.FluentValidation;
+using Core.Aspects.Autofac.Validation;
 using Core.Results.Abstract;
 using Core.Results.Concrete;
 using Core.Results.Concrete.Data;
@@ -20,6 +22,7 @@ namespace Business.Concrete
             _rentalDal = rentalDal;
         }
 
+        [ValidationAspect(typeof(RentalValidator))]
         public IResult Add(Rental entity)
         {
        
@@ -53,6 +56,7 @@ namespace Business.Concrete
             throw new NotImplementedException();
         }
 
+        [ValidationAspect(typeof(RentalValidator))]
         public IResult Update(Rental rental)
         {
             throw new NotImplementedException();
