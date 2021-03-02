@@ -12,3 +12,6 @@
 > - NetStandart.Library
 > - Microsoft.EntityFrameworkCore.SqlServer
 > - Microsoft.AspNetCore.Http.Featurs v5.0.3
+
+> **Note:** Prensentation Layer,  masaüstü denemesi yaptığım basit bir Windows Form uygulamasıdır
+
