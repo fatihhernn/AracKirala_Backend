@@ -47,7 +47,7 @@ namespace Business.Concrete
             
             carImage.Date = DateTime.Now;
             _carImageDAL.Add(carImage);
-            return new SuccessResult();
+            return new SuccessResult(Messages.CarImagesAdded);
         }
 
         
@@ -66,22 +66,22 @@ namespace Business.Concrete
             }
 
             _carImageDAL.Delete(carImage);
-            return new SuccessResult();
+            return new SuccessResult(Messages.CarImageDeleted);
         }
 
         public IDataResult<CarImage> Get(int id)
         {
-            return new SuccessDataResult<CarImage>(_carImageDAL.Get(p => p.Id == id));
+            return new SuccessDataResult<CarImage>(_carImageDAL.Get(p => p.Id == id),Messages.CarImageListedById);
         }
 
         public IDataResult<List<CarImage>> GetAll()
         {
-            return new SuccessDataResult<List<CarImage>>(_carImageDAL.GetAll());
+            return new SuccessDataResult<List<CarImage>>(_carImageDAL.GetAll(),Messages.AllCarImagesListed);
         }
 
         public IDataResult<List<CarImage>> GetImagesByCarId(int id)
         {
-            return new SuccessDataResult<List<CarImage>>(CheckIfCarImageNull(id));
+            return new SuccessDataResult<List<CarImage>>(CheckIfCarImageNull(id),Messages.CarListedByCarId);
         }
 
         public IResult Update(CarImage carImage, IFormFile file)

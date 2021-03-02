@@ -1,4 +1,5 @@
-﻿using Entities.Concrete;
+﻿using Core.Entities.Concrete;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -50,10 +51,19 @@ namespace Business.Constants
 
         public static string CarImageLimitExceeded = "Eklenebilecek resim sayısı aşılmaktadır";
 
-        public static string CarListedByCarId { get; internal set; }
-        public static string AllCarImagesListed { get; internal set; }
-        public static string CarImageListedById { get; internal set; }
-        public static string CarImageDeleted { get; internal set; }
-        public static string CarImagesAdded { get; internal set; }
+        public static string CarListedByCarId = "Araba Id'sine göre resimler listelendi";
+        public static string AllCarImagesListed = "";
+        public static string CarImageListedById = "";
+        public static string CarImageDeleted = "Araba resmi silimdi";
+        public static string CarImagesAdded = "Araba resmi eklendi";
+        public static string UserNotFound = "Kullanici bulunmadi";
+        public static string PasswordError = "Hatali şifre";
+        public static string SuccessfulLogin = "Giriş başarılı";
+
+        public static string UserAlreadyExists = "Kullanici zaten mevcut";
+
+        public static string UserRegistered = "Kullanici basariyla kaydedildi";
+
+        public static string AccessTokenCreated = "Access token başarı ile oluşturuldu";
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Business.Abstract;
 using Business.Concrete;
+using Core.Entities.Concrete;
 using DataAccess.Concrete.EntityFramework.Context;
 using Entities.Concrete;
 using System;
@@ -42,7 +43,7 @@ namespace PresentationLayer
                 FirstName=txtFirstName.Text,
                 LastName=txtLastName.Text,
                 Email=txtEmail.Text,
-                Password=txtPassword.Text
+                //Password=txtPassword.Text
             });
             Close();
 
