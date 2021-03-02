@@ -20,4 +20,8 @@
     <ProjectReference Include="..\Business\Business.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Images\carImages\" />
+  </ItemGroup>
+
 </Project>

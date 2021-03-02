@@ -11,6 +11,7 @@ namespace Business.ValidationRules.FluentValidation
         public CarImageValidator()
         {
             RuleFor(p => p.CarId).NotNull().WithMessage("Lütfen araba Id'si gönderin");
+            RuleFor(p => p.ImagePath).NotNull().WithMessage("Fotoğraf seçilmedi");
         }
     }
 }

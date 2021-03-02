@@ -49,5 +49,11 @@ namespace Business.Constants
         public static string UploadCarImage = "Fotoğraf yüklendi";
 
         public static string CarImageLimitExceeded = "Eklenebilecek resim sayısı aşılmaktadır";
+
+        public static string CarListedByCarId { get; internal set; }
+        public static string AllCarImagesListed { get; internal set; }
+        public static string CarImageListedById { get; internal set; }
+        public static string CarImageDeleted { get; internal set; }
+        public static string CarImagesAdded { get; internal set; }
     }
 }
