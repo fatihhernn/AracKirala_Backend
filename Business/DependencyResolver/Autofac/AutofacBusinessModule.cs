@@ -40,6 +40,7 @@ namespace Business.DependencyResolver.Autofac
             builder.RegisterType<EfCarImageDal>().As<ICarImageDal>().SingleInstance();
 
             builder.RegisterType<AuthManager>().As<IAuthService>().SingleInstance();
+
             builder.RegisterType<JwtHelper>().As<ITokenHelper>().SingleInstance();
 
 

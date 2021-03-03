@@ -35,7 +35,7 @@ namespace Business.Concrete
         public IDataResult<User> Login(UserForLoginDto userForLoginDto)
         {
             var userToCheck = _userService.GetByEmail(userForLoginDto.Email);
-            if (userToCheck == null)
+            if (userToCheck.Data==null)
             {
                 return new ErrorDataResult<User>(Messages.UserNotFound);
             }
@@ -66,7 +66,7 @@ namespace Business.Concrete
 
         public IResult UserExists(string email)
         {
-            if (_userService.GetByEmail(email)!=null)
+            if (_userService.GetByEmail(email).Success)
             {
                 return new ErrorResult(Messages.UserAlreadyExists);
             }

@@ -1,8 +1,10 @@
+using Core.Utilities.IoC;
 using Core.Utilities.Security.Encyption;
 using Core.Utilities.Security.JWT;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -55,8 +57,9 @@ namespace WebUI
                     };
                 });
 
-            //services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            //ServiceTool.Create(services);
+
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            ServiceTool.Create(services);
 
             services.AddSwaggerGen(c =>
             {
