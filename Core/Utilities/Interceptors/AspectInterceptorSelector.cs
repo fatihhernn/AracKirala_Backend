@@ -1,4 +1,6 @@
 ﻿using Castle.DynamicProxy;
+using Core.Aspects.Autofac.Exception;
+using Core.CrossCuttingConcerns.Logging.Log4Net.Logger;
 using System;
 using System.Linq;
 using System.Reflection;
@@ -17,7 +19,8 @@ namespace Core.Utilities.Interceptors
 
             //aşağıdaki gibi bir ekleme yaparsak, mevcuttaki tüm metodlara bu aspect ekler.
 
-            //classAttributes.Add(new ExceptionLogAspect(typeof(FileLogger))); loglama için
+            classAttributes.Add(new ExceptionLogAspect(typeof(FileLogger))); //loglama için
+           
 
             return classAttributes.OrderBy(x => x.Priority).ToArray();
         }

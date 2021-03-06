@@ -3,6 +3,7 @@ using Business.BusinessAspects.Autofac;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
 using Core.Aspects.Autofac.Caching;
+using Core.Aspects.Autofac.Exception;
 using Core.Aspects.Autofac.Logging;
 using Core.Aspects.Autofac.Performance;
 using Core.Aspects.Autofac.Transaction;
@@ -49,7 +50,8 @@ namespace Business.Concrete
         }
 
         //[CacheAspect]
-        [LogAspect(typeof(FileLogger))]
+        //[LogAspect(typeof(FileLogger))]
+        //[ExceptionLogAspect(typeof(FileLogger)] => bunu her yerde yazmak yerine daha merkezi yere taşıyabiliriz
         public IDataResult<List<Car>> GetAll()
         {
             return new SuccessDataResult<List<Car>>(_carDal.GetAll(),Messages.CarsListed);
