@@ -61,7 +61,9 @@ namespace WebUI
 
             services.AddDependencyResolvers(new ICoreModule[]
             {
+
                 new CoreModule()
+
             });
             
 

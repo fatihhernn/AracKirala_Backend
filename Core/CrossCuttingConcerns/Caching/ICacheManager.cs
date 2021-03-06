@@ -11,7 +11,7 @@ namespace Core.CrossCuttingConcerns.Caching
         void Add(string key, object value, int duration);
 
         //cache'de var mı kontrolu sağlar
-        bool isAdd();
+        bool IsAdd(string key);
         void Remove(string key);
 
         //içinde get olanları uçur
