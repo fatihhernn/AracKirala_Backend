@@ -15,3 +15,5 @@
 
 > **Note:** Prensentation Layer,  masaüstü denemesi yaptığım basit bir Windows Form uygulamasıdır
 
+> **Note:** Uygulamaya ait tablo scriptleri, TablesOfRentACar dosyası içerisindedir
+
