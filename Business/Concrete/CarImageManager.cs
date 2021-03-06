@@ -34,6 +34,7 @@ namespace Business.Concrete
             IResult result = BusinessRules.Run(
 
                    CheckImageLimitExceeded(carImage.CarId)
+
                    );
 
             if (result != null)
@@ -91,6 +92,8 @@ namespace Business.Concrete
             _carImageDAL.Update(carImage);
             return new SuccessResult();
         }
+
+
 
 
 

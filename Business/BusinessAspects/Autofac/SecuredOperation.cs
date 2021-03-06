@@ -1,0 +1,44 @@
+﻿using Core.Utilities.IoC;
+
+using Microsoft.AspNetCore.Http;
+using System;
+using System.Collections.Generic;
+using System.Text;
+using Castle.DynamicProxy;
+using Microsoft.Extensions.DependencyInjection;
+using Core.Extensions;
+using Business.Constants;
+using Core.Utilities.Interceptors;
+
+namespace Business.BusinessAspects.Autofac
+{
+    public class SecuredOperation:MethodInterception
+    {
+        //JWT için
+
+        private string[] _roles;
+        private IHttpContextAccessor _httpContextAccessor;  //istek yapan herkese 1 tane thread oluşur
+
+        public SecuredOperation(string roles)
+        {
+            _roles = roles.Split(',');
+
+            //IoC'de aspect injection yok, o yüzden aşağıdaki toolu yazdım => bu dependency yakalayabilmek için aşağıdaki tool yazılır
+            _httpContextAccessor = ServiceTool.ServiceProvider.GetService<IHttpContextAccessor>();
+        }
+
+        protected override void OnBefore(IInvocation invocation)
+        {
+            var roleClaims = _httpContextAccessor.HttpContext.User.ClaimRoles();
+            foreach (var role in _roles)
+            {
+                if (roleClaims.Contains(role))
+                {
+                    return;
+                }
+            }
+            throw new Exception(Messages.AuthorizationDenied);
+        }
+    }
+}
+
