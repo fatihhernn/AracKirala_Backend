@@ -11,6 +11,7 @@ namespace Business.ValidationRules.FluentValidation
         public CarValidator()
         {
             RuleFor(p => p.Description).NotEmpty();
+            RuleFor(p => p.Description).Must(StartWithA);
         }
         private bool StartWithA(string arg)
         {
