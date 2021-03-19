@@ -31,34 +31,6 @@ namespace DataAccess.Concrete.EntityFramework
 
                 return result.ToList();
             };
-
-      //      select b.Description,u.FirstName+u.LastName from Rentals r inner join Cars c on c.Id=r.CarId 
-						                                              //inner join Customers cst on cst.Id=r.CustomerId
-						                                              //inner join Brands b on b.Id=c.BrandId
-						                                              //inner join Users u on u.Id=cst.UserId
-
-            //public List<CarDetailDto> GetCarDetails()
-            //{
-            //    using (RentACarContext context = new RentACarContext())
-            //    {
-            //        var result = from c in context.Cars
-            //                     join b in context.Brands on c.BrandId equals b.Id
-            //                     join clr in context.Colors on c.ColorId equals clr.Id
-            //                     select new CarDetailDto
-            //                     {
-            //                         BrandName = b.Description,
-            //                         CarId = c.Id,
-            //                         Description = c.Description,
-            //                         DailyPrice = c.DailyPrice,
-            //                         ColorName = clr.Description
-            //                     };
-
-            //        return result.ToList();
-            //    };
-
-            //}
-
-
         }
     }
 }
