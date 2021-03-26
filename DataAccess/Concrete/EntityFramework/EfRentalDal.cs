@@ -18,7 +18,7 @@ namespace DataAccess.Concrete.EntityFramework
             {
                 var result = from r in context.Rentals
                              join c in context.Cars on r.CarId equals c.Id
-                             join cst in context.Customers on r.Id equals cst.Id
+                             join cst in context.Customers on r.CustomerId equals cst.Id
                              join b in context.Brands on c.BrandId equals b.Id
                              join u in context.Users on cst.UserId equals u.Id
 
@@ -32,5 +32,7 @@ namespace DataAccess.Concrete.EntityFramework
                 return result.ToList();
             };
         }
+
+       
     }
 }

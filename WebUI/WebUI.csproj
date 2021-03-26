@@ -5,10 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="wwwroot\**" />
-    <Content Remove="wwwroot\**" />
-    <EmbeddedResource Remove="wwwroot\**" />
-    <None Remove="wwwroot\**" />
+    <Content Remove="wwwroot\Images\carLogo.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -24,6 +21,10 @@
 
   <ItemGroup>
     <Folder Include="Images\carImages\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Images\carLogo.jpg" />
   </ItemGroup>
 
 </Project>

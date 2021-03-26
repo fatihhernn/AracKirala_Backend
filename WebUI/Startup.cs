@@ -90,6 +90,8 @@ namespace WebUI
 
             app.UseHttpsRedirection();
 
+            app.UseStaticFiles();
+
             app.UseRouting();
 
             //eve girmek 

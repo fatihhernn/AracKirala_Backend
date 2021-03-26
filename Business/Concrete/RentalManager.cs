@@ -7,6 +7,7 @@ using Core.Results.Concrete;
 using Core.Results.Concrete.Data;
 using DataAccess.Abstract;
 using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -54,6 +55,11 @@ namespace Business.Concrete
         public IDataResult<Rental> GetById(int rentalId)
         {
             throw new NotImplementedException();
+        }
+
+        public IResult GetRentalDetails()
+        {
+            return new SuccessDataResult<List<RentalDetailDto>>(_rentalDal.GetRentalDetails());
         }
 
         [ValidationAspect(typeof(RentalValidator))]
