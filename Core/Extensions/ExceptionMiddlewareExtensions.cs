@@ -7,6 +7,7 @@ namespace Core.Extensions
 {
     public static class ExceptionMiddlewareExtensions
     {
+        //araya middleware yazacağız =>(EXTENTION konusu) extent ediyoruz ExceptionMiddleware ekle... UseMiddleware .net core'dan geliyor
         public static void ConfigureCustomMiddleware(this IApplicationBuilder app)
         {
             app.UseMiddleware<ExceptionMiddleware>();

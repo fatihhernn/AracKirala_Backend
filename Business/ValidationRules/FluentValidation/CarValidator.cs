@@ -11,7 +11,7 @@ namespace Business.ValidationRules.FluentValidation
         public CarValidator()
         {
             RuleFor(p => p.Description).NotEmpty();
-            RuleFor(p => p.Description).Must(StartWithA);
+            RuleFor(p => p.Description).Must(StartWithA).WithMessage("Tanım alanı Büyük A harfi ile başlamalı");
         }
         private bool StartWithA(string arg)
         {
