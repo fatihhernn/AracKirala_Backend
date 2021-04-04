@@ -17,6 +17,8 @@ namespace Business.Abstract
         IResult Update(Rental rental);
         IResult Delete(Rental rental);
         IResult GetRentalDetails();
+        IResult CheckCarStatus(Rental rental);
+
 
     }
 }

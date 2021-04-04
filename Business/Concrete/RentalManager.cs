@@ -26,20 +26,12 @@ namespace Business.Concrete
         [ValidationAspect(typeof(RentalValidator))]
         public IResult Add(Rental entity)
         {
-       
-            foreach (var rentalList in _rentalDal.GetAll())
+            if (_rentalDal.CheckCarStatus(entity.CarId, entity.RentDate, entity.ReturnDate))
             {
-                //rental listesini dolaş, eğer bu listede kiralayacağımız araba var ve daha araç teslim edilmemiş ise kaydetme
-                if (rentalList.CarId == entity.CarId&& entity.RentDate.Date <= rentalList.ReturnDate)
-                {
-                        return new ErrorResult(Messages.RentalTimeError);                 
-                }
-            
+                _rentalDal.Add(entity);
+                return new SuccessResult("araç başarıyla kiralandı");
             }
-
-            _rentalDal.Add(entity);//Kiralanan arabalar içerisinde yoksa kaydet
-            return new SuccessResult(Messages.RentedCar);
-            
+            return new ErrorResult("araç kiralanamadı");
         }
 
         public IResult Delete(Rental rental)
@@ -65,7 +57,22 @@ namespace Business.Concrete
         [ValidationAspect(typeof(RentalValidator))]
         public IResult Update(Rental rental)
         {
-            throw new NotImplementedException();
+            if (_rentalDal.CheckCarStatus(rental.CarId, rental.RentDate, rental.ReturnDate))
+            {
+                return new ErrorResult("kiralanma tarihleri uygun değildir");
+            }
+            _rentalDal.Update(rental);
+            return new SuccessResult("başarı ile güncellendi");
         }
+
+        public IResult CheckCarStatus(Rental rental)
+        {
+            if (_rentalDal.CheckCarStatus(rental.CarId, rental.RentDate, rental.ReturnDate))
+            {
+                return new SuccessResult("kiralanma tarihleri uygundur");
+            }
+            return new ErrorResult("kiralanma tarihleri uygun değildir");
+        }
+
     }
 }

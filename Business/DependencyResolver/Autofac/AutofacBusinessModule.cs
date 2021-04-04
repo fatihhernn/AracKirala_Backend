@@ -44,7 +44,8 @@ namespace Business.DependencyResolver.Autofac
 
             builder.RegisterType<JwtHelper>().As<ITokenHelper>().SingleInstance();
 
-
+            builder.RegisterType<PaymentManager>().As<IPaymentService>().SingleInstance();
+            builder.RegisterType<EfPaymentDal>().As<IPaymentDal>().SingleInstance();
 
 
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();

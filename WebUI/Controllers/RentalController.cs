@@ -35,9 +35,9 @@ namespace WebUI.Controllers
             var result = _rentalService.Add(rental);
             if (result.Success)
             {
-                return Ok(result.Message);
+                return Ok(result);
             }
-            return BadRequest(result.Message);
+            return BadRequest(result);
         }
         [HttpGet("getbyid")]
         public IActionResult Get(int id)
@@ -81,5 +81,17 @@ namespace WebUI.Controllers
             }
             return BadRequest(result.Message);
         }
+        [HttpPost("checkcarstatus")]
+        public IActionResult CheckCarStatus(Rental rental)
+        {
+            var result = _rentalService.CheckCarStatus(rental);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
+
     }
 }

@@ -92,7 +92,7 @@ namespace WebUI.Controllers
             }
             return BadRequest(result.Message);
         }
-        //GetCarDetailByColorAndBrand
+
         [HttpGet("get-car-details-by-color-brand")]
         public IActionResult GetCarDetailByColorAndBrand(int brandId, int colorId)
         {
@@ -124,6 +124,8 @@ namespace WebUI.Controllers
             }
             return BadRequest(result.Message);
         }
+
+       
 
     }
 }

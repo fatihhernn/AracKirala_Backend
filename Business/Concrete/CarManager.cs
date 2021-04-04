@@ -27,10 +27,12 @@ namespace Business.Concrete
     public class CarManager : ICarService
     {
         private ICarDal _carDal;
+        private IRentalService _rentalService;
 
-        public CarManager(ICarDal carDal)
+        public CarManager(ICarDal carDal, IRentalService rentalService)
         {
             _carDal = carDal;
+            _rentalService = rentalService;
         }
 
         [ValidationAspect(typeof(CarValidator))]
@@ -92,5 +94,7 @@ namespace Business.Concrete
         {
             return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetails(c => c.BrandId == brandId && c.ColorId == colorId));
         }
+
+        
     }
 }
