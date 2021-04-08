@@ -105,9 +105,9 @@ namespace WebUI.Controllers
         }
 
         [HttpDelete("delete")]
-        public IActionResult Delete(Car car)
+        public IActionResult Delete(int carId)
         {
-            var result = _carService.Delete(car);
+            var result = _carService.Delete(carId);
             if (result.Success)
             {
                 return Ok(result);
