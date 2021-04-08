@@ -26,7 +26,7 @@ namespace WebUI.Controllers
             {
                 return Ok(result);
             }
-            return BadRequest(result.Message);
+            return BadRequest(result);
         }
 
         [HttpPost("add")]
@@ -47,7 +47,7 @@ namespace WebUI.Controllers
             {
                 return Ok(result);
             }
-            return BadRequest(result.Message);
+            return BadRequest(result);
         }
 
         [HttpGet("getcardetails")]
@@ -58,7 +58,7 @@ namespace WebUI.Controllers
             {
                 return Ok(result);
             }
-            return BadRequest(result.Message);
+            return BadRequest(result);
         }
         [HttpGet("get-by-brand-id")]
         public IActionResult GetByBrandId(int brandId)
@@ -68,7 +68,7 @@ namespace WebUI.Controllers
             {
                 return Ok(result);
             }
-            return BadRequest(result.Message);
+            return BadRequest(result);
         }
 
         [HttpGet("get-by-color-id")]
@@ -79,7 +79,7 @@ namespace WebUI.Controllers
             {
                 return Ok(result);
             }
-            return BadRequest(result.Message);
+            return BadRequest(result);
         }
         
         [HttpGet("get-car-details-by-id")]
@@ -90,7 +90,7 @@ namespace WebUI.Controllers
             {
                 return Ok(result);
             }
-            return BadRequest(result.Message);
+            return BadRequest(result);
         }
 
         [HttpGet("get-car-details-by-color-brand")]
@@ -101,7 +101,7 @@ namespace WebUI.Controllers
             {
                 return Ok(result);
             }
-            return BadRequest(result.Message);
+            return BadRequest(result);
         }
 
         [HttpDelete("delete")]
@@ -110,9 +110,9 @@ namespace WebUI.Controllers
             var result = _carService.Delete(car);
             if (result.Success)
             {
-                return Ok(result.Message);
+                return Ok(result);
             }
-            return BadRequest(result.Message);
+            return BadRequest(result);
         }
         [HttpPut("put")]
         public IActionResult Put(Car car)
@@ -120,9 +120,9 @@ namespace WebUI.Controllers
             var result = _carService.Update(car);
             if (result.Success)
             {
-                return Ok(result.Message);
+                return Ok(result);
             }
-            return BadRequest(result.Message);
+            return BadRequest(result);
         }
 
        

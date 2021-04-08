@@ -88,7 +88,7 @@ namespace WebUI
             //bu middeleware sayesinde tüm api isteklerini try-catch içerisine aldýk => core/extensions/(errordetails,exceptionmiddleware,exceptionmiddlewareExcepritions)
             app.ConfigureCustomMiddleware();
 
-            app.UseCors(builder => builder.WithOrigins("http://localhost:4200").AllowAnyHeader());
+            app.UseCors(builder => builder.WithOrigins("http://localhost:4200").AllowAnyHeader().AllowAnyMethod().AllowCredentials());
 
             app.UseHttpsRedirection();
 
