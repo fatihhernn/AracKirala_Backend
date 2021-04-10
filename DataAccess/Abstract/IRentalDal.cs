@@ -13,5 +13,6 @@ namespace DataAccess.Abstract
     {
         List<RentalDetailDto> GetRentalDetails();
         bool CheckCarStatus(int carId, DateTime rentDate, DateTime? returnDate);
+        
     }
 }

@@ -18,6 +18,7 @@ namespace Business.Abstract
         IResult Delete(Rental rental);
         IResult GetRentalDetails();
         IResult CheckCarStatus(Rental rental);
+        IResult CheckFindexScore(Rental rental);
 
 
     }

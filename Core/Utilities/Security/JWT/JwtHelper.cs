@@ -20,10 +20,11 @@ namespace Core.Utilities.Security.JWT
         {
             Configuration = configuration;
             _tokenOptions = Configuration.GetSection("TokenOptions").Get<TokenOptions>();
-            _accessTokenExpiration = DateTime.Now.AddMinutes(_tokenOptions.AccessTokenExpiration);
+            //_accessTokenExpiration = DateTime.Now.AddMinutes(_tokenOptions.AccessTokenExpiration);
         }
         public AccessToken CreateToken(User user, List<OperationClaim> operationClaims)
         {
+            _accessTokenExpiration = DateTime.Now.AddMinutes(_tokenOptions.AccessTokenExpiration);
             // bir algoritmayı kullanarak kendimize şifreli token oluşturcaz. token encrypt ederken kendi bildiğimiz özel bir anahtara ihtiyacımız var
             var securityKey = SecurityKeyHelper.CraeteSecurityKey(_tokenOptions.SecurityKey);
 

@@ -92,6 +92,16 @@ namespace WebUI.Controllers
             return BadRequest(result);
         }
 
+        [HttpPost("checkFindexScore")]
+        public IActionResult CheckFindexScore(Rental rental)
+        {
+            var result = _rentalService.CheckFindexScore(rental);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
 
     }
 }

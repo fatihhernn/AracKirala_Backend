@@ -27,16 +27,15 @@ namespace Business.Concrete
     public class CarManager : ICarService
     {
         private ICarDal _carDal;
-        private IRentalService _rentalService;
 
-        public CarManager(ICarDal carDal, IRentalService rentalService)
+
+        public CarManager(ICarDal carDal)
         {
             _carDal = carDal;
-            _rentalService = rentalService;
         }
 
         [ValidationAspect(typeof(CarValidator))]
-        //[SecuredOperation("admin")]
+        [SecuredOperation("admin")]
         [TransactionScopeAspect]
         [PerformanceAspect(5)]
         public IResult Add(Car car)
