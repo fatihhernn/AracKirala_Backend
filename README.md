@@ -209,7 +209,11 @@ AmountPaye | DECIMAL(18, 2)
   </tr>
  </table>
 
-<p align="left">
+
+
+
+## [Bu backend projesinin, frontend tasarımı Angular ile inşaa edildi. İndirmek ve incelemek için tıkla](https://github.com/fatihhernn/RecapProjectFrontend) 
+<p align="center">
   <img src="https://github.com/fatihhernn/ReCapProject/blob/master/Screenshot_27.png" width="600" alt=".netProject">
 </p>
 
