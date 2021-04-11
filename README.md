@@ -1,5 +1,5 @@
 <h1 align="center">ReCap Project : Araba Kiralama Projesi</h1> 
 
 <p align="center">
-  <img src="" width="600" alt=".netProject">
+  <img src="https://github.com/fatihhernn/ReCapProject/blob/master/Screenshot_26.png" width="600" alt=".netProject">
 </p>
