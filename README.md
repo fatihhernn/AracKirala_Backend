@@ -31,7 +31,8 @@ $ dotnet restore
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📋 [Abstract Interfaces](https://github.com/fatihhernn/ReCapProject/tree/master/Business/Abstract) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📋 [Autofac / SecuredOperation](https://github.com/fatihhernn/ReCapProject/tree/master/Business/Abstracthttps://github.com/fatihhernn/ReCapProject/blob/master/Business/BusinessAspects/Autofac/SecuredOperation.cs) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📋 [Constants "Magic String 💫"](https://github.com/fatihhernn/ReCapProject/tree/master/Business/Abstracthttps://github.com/fatihhernn/ReCapProject/blob/master/Business/BusinessAspects/Autofac/SecuredOperation.cs) <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📋 [DependencyResolver / Autofac"](https://github.com/fatihhernn/ReCapProject/blob/master/Business/DependencyResolver/Autofac/AutofacBusinessModule.cs) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📋 [DependencyResolver / Autofac](https://github.com/fatihhernn/ReCapProject/blob/master/Business/DependencyResolver/Autofac/AutofacBusinessModule.cs) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📋 [ValidationRules / FluentValidation](https://github.com/fatihhernn/ReCapProject/tree/master/Business/ValidationRules/FluentValidation) <br>
 
 
 
