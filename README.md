@@ -8,6 +8,10 @@
 - **Katmanlı mimari örnekleri esas alınarak Entities, DataAccess, Business, Core ve WebAPI katmanlarından oluşan araba kiralama projesidir. Bu projede SOLID,DRY,REPOSITORY DESING PATTERN, SOCKET PROGRAMMING, DEFENSIVE PROGRAMMING 
 - **Validation için FluentValidation desteği, IoC için ise Autofac, Cache işlemleri için Microsoft Memory Cache, desteği eklenmiştir.**
 - **Loglamalar hem dosyaya hem de veritabanında tutulabilir.**
+<p align="center">
+  <img src="https://github.com/fatihhernn/ReCapProject/blob/master/Screenshot_6.png" width="400" height="200" alt=".netProject">
+</p>
+ 
 - **[Sql query](https://github.com/fatihhernn/ReCapProject/blob/master/rentacardb.sql) bu linkte Sql tablolarını Sql Server 2019'da oluşturabilirisiniz.**
 
 ## ⭐ Installation
@@ -34,7 +38,7 @@ $ dotnet restore
   
   <tr>
     <td>
-           <img src="https://github.com/fatihhernn/ReCapProject/blob/master/business.png" width="600" alt=".netProject">
+           <img src="https://github.com/fatihhernn/ReCapProject/blob/master/business.png" width="200" height="200" alt=".netProject">
    </td>
    <td>
            <img src="https://github.com/fatihhernn/ReCapProject/blob/master/core.png" width="600" alt=".netProject">
