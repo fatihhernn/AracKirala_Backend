@@ -2,9 +2,7 @@
 
 <h1 align="center">Rent A Car Project : Araba Kiralama Projesi</h1> 
 
-<p align="center">
-  <img src="https://github.com/fatihhernn/ReCapProject/blob/master/Screenshot_27.png" width="600" alt=".netProject">
-</p>
+
 
 ## ⭐ Introduction
 - **Katmanlı mimari örnekleri esas alınarak Entities, DataAccess, Business, Core ve WebAPI katmanlarından oluşan araba kiralama projesidir. Bu projede SOLID,DRY,REPOSITORY DESING PATTERN, SOCKET PROGRAMLAMA, DEFENSIVE PROGRAMLAMA mimarileri dikkate alınarak hazırlanmaktadır. Json Web Token entegrasyonu; Transaction, Cache, Validation,Logger ve Performance aspect'lerinin implementasyonu gerçekleştirilmiştir.** 
@@ -23,6 +21,35 @@ $ cd re-cap-project-with-csharp
 # Install dependencies
 $ dotnet restore
 ```
+
+## Projemizi localimize kaydettikten sonra oluşan klasörlerimiz 
+<table>
+  <tr>
+     <td>Business</td>
+     <td>Core</td>
+    <td>DataAccess</td>
+    <td>Entities</td>
+    <td>API</td>
+  </tr>
+  
+  <tr>
+    <td>
+           <img src="https://github.com/fatihhernn/ReCapProject/blob/master/business.png" width="600" alt=".netProject">
+   </td>
+   <td>
+           <img src="https://github.com/fatihhernn/ReCapProject/blob/master/core.png" width="600" alt=".netProject">
+   </td>
+   <td>
+           <img src="https://github.com/fatihhernn/ReCapProject/blob/master/dataaccess.png" width="600" alt=".netProject">
+   </td>
+   <td>
+           <img src="https://github.com/fatihhernn/ReCapProject/blob/master/entities.png" width="600" alt=".netProject">
+   </td>
+   <td>
+           <img src="https://github.com/fatihhernn/ReCapProject/blob/master/api.png" width="600" alt=".netProject">
+   </td>
+ </table>
+
 
 
 ## Layers
@@ -58,7 +85,7 @@ $ dotnet restore
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂 [``Controllers``](https://github.com/fatihhernn/ReCapProject/tree/master/WebUI/Controllers) <br>
 
 
-## Tables in Database
+## Database için gerekli olan tablolarımız
 <table>
   <tr>
      <td>Brands</td>
@@ -182,4 +209,7 @@ AmountPaye | DECIMAL(18, 2)
   </tr>
  </table>
 
+<p align="left">
+  <img src="https://github.com/fatihhernn/ReCapProject/blob/master/Screenshot_27.png" width="600" alt=".netProject">
+</p>
 
