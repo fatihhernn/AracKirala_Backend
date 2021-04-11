@@ -5,7 +5,7 @@
 
 
 ## ⭐ Introduction
-- **Katmanlı mimari örnekleri esas alınarak Entities, DataAccess, Business, Core ve WebAPI katmanlarından oluşan araba kiralama projesidir. Bu projede SOLID,DRY,REPOSITORY DESING PATTERN, SOCKET PROGRAMLAMA, DEFENSIVE PROGRAMLAMA mimarileri dikkate alınarak hazırlanmaktadır. Json Web Token entegrasyonu; Transaction, Cache, Validation,Logger ve Performance aspect'lerinin implementasyonu gerçekleştirilmiştir.** 
+- **Katmanlı mimari örnekleri esas alınarak Entities, DataAccess, Business, Core ve WebAPI katmanlarından oluşan araba kiralama projesidir. Bu projede SOLID,DRY,REPOSITORY DESING PATTERN, SOCKET PROGRAMMING, DEFENSIVE PROGRAMMING 
 - **Validation için FluentValidation desteği, IoC için ise Autofac, Cache işlemleri için Microsoft Memory Cache, desteği eklenmiştir.**
 - **Loglamalar hem dosyaya hem de veritabanında tutulabilir.**
 - **[Sql query](https://github.com/fatihhernn/ReCapProject/blob/master/rentacardb.sql) bu linkte Sql tablolarını Sql Server 2019'da oluşturabilirisiniz.**
