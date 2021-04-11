@@ -26,6 +26,14 @@ $ dotnet restore
 
 
 ## Layers
-📌**``Entities Layer``** <br>
-&nbsp;&nbsp;&nbsp;&nbsp;📂 ``Concrete`` <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📋 [Concrete Folders](https://github.com/fatihhernn/ReCapProject/tree/master/Business/Concrete) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;📂 ``Business Layers`` <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📋 [Concrete Classes](https://github.com/fatihhernn/ReCapProject/tree/master/Business/Concrete) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📋 [Abstract Interfaces](https://github.com/fatihhernn/ReCapProject/tree/master/Business/Abstract) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📋 [Autofac / SecuredOperation](https://github.com/fatihhernn/ReCapProject/tree/master/Business/Abstracthttps://github.com/fatihhernn/ReCapProject/blob/master/Business/BusinessAspects/Autofac/SecuredOperation.cs) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📋 [Constants "Magic String 💫"](https://github.com/fatihhernn/ReCapProject/tree/master/Business/Abstracthttps://github.com/fatihhernn/ReCapProject/blob/master/Business/BusinessAspects/Autofac/SecuredOperation.cs) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 📋 [DependencyResolver / Autofac"](https://github.com/fatihhernn/ReCapProject/blob/master/Business/DependencyResolver/Autofac/AutofacBusinessModule.cs) <br>
+
+
+
+
+
