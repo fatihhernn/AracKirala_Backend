@@ -58,3 +58,128 @@ $ dotnet restore
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;📂 [``Controllers``](https://github.com/fatihhernn/ReCapProject/tree/master/WebUI/Controllers) <br>
 
 
+## Tables in Database
+<table>
+  <tr>
+     <td>Brands</td>
+     <td>CarImages</td>
+     <td>Cars</td>
+     <td>Colors</td>
+     <td>Customers</td>
+     <td>OperationClaims</td>
+     <td>Rentals</td>
+     <td>UserOperationClaims</td>
+     <td>Users</td>
+     <td>Payment</td>
+  </tr>
+  <tr>
+    <td>
+      
+Variable Name | Data Type
+------------ | -------------
+Id | INT
+BrandName | NVARCHAR(25)
+
+   
+   </td>
+    <td>
+  
+Variable Name | Data Type
+------------ | -------------
+Id | INT
+CarId | INT
+CarImagesDate | DATETIME
+ImagePath | NVARCHAR(MAX)
+   
+   </td>
+    <td>
+  
+Variable Name | Data Type
+------------ | -------------
+Id | INT
+BrandId | INT
+ColorId | INT
+ModelYear | NVARCHAR(25)
+DailyPrice | DECIMAL
+Description | NVARCHAR(25)
+
+   
+   </td>
+    <td>
+
+Variable Name | Data Type
+------------ | -------------
+Id | INT
+ColorName | NVARCHAR(25)
+
+   </td>
+    <td>
+
+
+Variable Name | Data Type
+------------ | -------------
+Id | INT
+UserId | INT
+CustomerName | NVARCHAR(25)
+FindexScore | INT
+
+   </td>
+    <td>
+
+
+Variable Name | Data Type
+------------ | -------------
+Id | INT
+Name  | VARCHAR(250)
+
+   </td>
+   <td>
+  
+Variable Name | Data Type
+------------ | -------------
+Id | INT
+CarId | INT
+CustomerId | INT
+RentDate | DATETIME
+ReturnDate | DATETIME
+PaymentId | INT
+
+   </td>
+    <td>
+  
+Variable Name | Data Type
+------------ | -------------
+Id | INT
+UserId | INT
+OperationId | INT
+
+   </td>
+    <td>
+  
+Variable Name | Data Type
+------------ | -------------
+Id | INT
+FirstName | VARCHAR(50)
+LastName | VARCHAR(50)
+Email | VARCHAR(50)
+PasswordHash | VARBINARY (500)
+PasswordSalt | VARBINARY (500)
+Status | BIT
+
+   </td>
+    <td>
+  
+Variable Name | Data Type
+------------ | -------------
+PaymentId | INT
+CardNameSurname | VARCHAR(100)
+CardNumber | NVARCHAR(100)
+CardExpiryDate | NVARCHAR(50)
+CardCvv | NVARCHAR (3)
+AmountPaye | DECIMAL(18, 2) 
+
+   </td>
+  </tr>
+ </table>
+
+
